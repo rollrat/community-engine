@@ -1,4 +1,8 @@
+const t_config = require("./config/test_config");
+
 var modules = [];
+
+modules.push(t_config);
 
 async function run_test() {
   for (var module of modules) {
