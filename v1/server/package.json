@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "yaml": "^1.10.2"
   }
 }
