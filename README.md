@@ -1,1 +1,3 @@
-# Community Engine (Backend based on node.js)
+# Community Engine (Backend based on nest.js)
+
+Scalable Community Engine based on Container
