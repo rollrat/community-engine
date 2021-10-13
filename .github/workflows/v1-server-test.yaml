@@ -23,4 +23,5 @@ jobs:
           npm i
       - name: Test
         run: |
+          cd v1/server
           npm test
