@@ -1,2 +1,2 @@
-git config user.email rollrat.cse@gmail.com
-git config user.name rollrat
+git config --local user.email rollrat.cse@gmail.com
+git config --local user.name rollrat
