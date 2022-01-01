@@ -55,6 +55,33 @@ docker run -it --network redis-net --rm redis:alpine ash
 redis-cli -h redis-container
 ```
 
+### Redis Bulk Insertion (Pipeline)
+
+bulk.txt 작성
+
+```
+flushall
+setex weekly-2098480-63254 648 1
+zincrby monthly 1 2098480
+setex monthly-2098480-63254 648 1
+zincrby alltime 1 1746954
+zincrby daily 1 1746954
+setex daily-1746954-63255 645 1
+zincrby weekly 1 1746954
+setex weekly-1746954-63255 645 1
+zincrby monthly 1 1746954
+setex monthly-1746954-63255 645 1
+...
+```
+
+```sh
+cat bulk.txt | redis-cli -h ~~~.cache.amazonaws.com -p 6379 --pipe
+```
+
+```
+9,421,462개 삽입 명령 31,592ms 소요
+```
+
 ## MySql 설치
 
 ```
